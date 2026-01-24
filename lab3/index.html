@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab #3</title>
+</head>
+<body>
+
+    <h1>Lab #3: Interactive Temperature Converter</h1>
+
+    <p>
+        This program converts a temperature from Fahrenheit
+        to either Celsius or Kelvin.
+    </p>
+
+    <p>
+        <label for="inputF">Enter temperature in Fahrenheit:</label><br>
+        <input type="text" id="inputF">
+    </p>
+
+    <p>
+        Choose a conversion:<br>
+        <select id="conversionChoice">
+            <option value="c">Celsius</option>
+            <option value="k">Kelvin</option>
+        </select>
+    </p>
+
+    <button id="submit">Convert Temperature</button>
+
+    <!-- Output container -->
+    <div id="output"></div>
+
+    <!-- Scripts -->
+    <script src="output.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
