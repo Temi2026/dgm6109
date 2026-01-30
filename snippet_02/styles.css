@@ -1,0 +1,60 @@
+/* styles.css */
+
+/* Changed default font */
+/* Resource: W3Schools & MDN font-family documentation */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Added spacing between elements */
+/* Resource: MDN margin property guide */
+h1, h2, p, img {
+    margin-bottom: 20px;
+}
+
+/* Shortened paragraph width while keeping responsive */
+/* Resource: MDN max-width documentation */
+p {
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Default in-text link styling */
+a {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/* Hover state for in-text link */
+/* Resource: W3Schools pseudo-class reference */
+a:hover {
+    color: white;
+    background-color: darkblue;
+    text-decoration: none;
+}
+
+/* Focus state for accessibility */
+/* Resource: MDN accessibility best practices */
+a:focus {
+    outline: 3px solid orange;
+}
+
+/* Styling image inside a link */
+a img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover state for linked image */
+a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus state for linked image */
+a img:focus {
+    outline: 4px solid orange;
+}
