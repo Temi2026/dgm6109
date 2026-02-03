@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 2-3 Credit Card Verification</title>
+</head>
+<body>
+
+<h2>Credit Card Verification</h2>
+
+<form>
+    <label>Credit Card Type:</label><br>
+    <select id="cardType">
+        <option value="">-- Select --</option>
+        <option value="charicard">Charicard</option>
+        <option value="gengcard">Gengcard</option>
+    </select><br><br>
+
+    <label>Credit Card Number:</label><br>
+    <input type="text" id="cardNumber"><br><br>
+
+    <label>Validation Code (4 digits):</label><br>
+    <input type="text" id="validationCode"><br><br>
+
+    <label>ZIP Code:</label><br>
+    <input type="text" id="zipCode"><br><br>
+
+    <button type="button" onclick="processCard()">Submit</button>
+</form>
+
+<p id="output"></p>
+
+<!-- Order matters -->
+<script src="output.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
