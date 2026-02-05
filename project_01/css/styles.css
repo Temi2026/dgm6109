@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: #0f172a;
+    color: white;
+    padding: 1.5rem;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    text-decoration: underline;
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+section {
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+h3 { font-size: 1.3rem; margin-top: 1rem; }
+h4 { font-size: 1.1rem; margin-top: 0.5rem; }
+
+p {
+    margin-top: 1rem;
+    max-width: 600px;
+}
+
+a {
+    color: #2563eb;
+}
+
+a:hover,
+a:focus {
+    color: #1d4ed8;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1d4ed8;
+    outline: 3px solid #93c5fd;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #cbd5e1;
+    outline: 3px solid #94a3b8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input[type="text"] {
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #2563eb;
+    outline: none;
+}
+
+.checkbox-label {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+img {
+    margin-top: 1rem;
+    width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.feature-list {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    max-width: 350px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #0f172a;
+    color: white;
+}
