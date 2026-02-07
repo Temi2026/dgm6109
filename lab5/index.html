@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Temitope Henrietta Obatoke Lab #5 - winter 2026</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Your drawing -->
+    <script src="elements/caterpillar.js"></script>
+     
+    <!-- Classmate scripts -->
+    <script src="elements/frog.js"></script>
+    <script src="elements/drawButterfly.js"></script>
+    <script src="elements/drummer.js"></script>
+
+<head>
+    
+<body>
+    <h2>Lab 5 Drawing Assignment</h2>    
+    
+    <!-- First element -->
+    <p>
+        Select the first element:
+        <select id="choice1">
+           <option value="caterpillar">caterpillar</option>
+           <option value="frog">frog</option>
+           <option value="drawButterfly">drawButterfly</option>
+           <option value="drummer">drummer</option>
+        </select>
+    </p>
+    <p>Position: x:<input type="number" id="x1" value="100">, y:<input type="number" id="y1" value="300"></p>
+
+    <!-- second element -->
+    <p>
+        select the second element:
+        <select id="choice2">
+           <option value="caterpillar">caterpillar</option>
+           <option value="frog">frog</option>
+           <option value="drawButterfly">drawButterfly</option>
+           <option value="drummer">drummer</option>
+           
+        </select>
+        </p>
+        <p>Position: x:<input type="number" id="x2" value="300">, y:<input type="number" id="y2" value="300"></p>
+
+        <!-- show origin points -->
+    <p>
+         Show origin points:
+         <select id="origins">
+              <option value="yes">yes</option>
+              <option value="yes">no</option>
+            </select>
+       </p>
+
+        <button id="action">Draw!</button>
+
+        <div id="canvas"></div>
+
+        <!-- main JS -->
+         <script src="main.js"></script>
+</body>
+
+</html>
+    
