@@ -2,8 +2,8 @@
    Snippet 03 - Media Queries with CSS Grid
    Resources used:
    - MDN Web Docs (CSS Grid & Media Queries)
-   - W3Schools CSS Grid Guide
-   - Class lecture materials
+   - W3Schools CSS Grid Tutorial
+   - Lecture slides from class
 */
 
 /* =========================
@@ -13,10 +13,11 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+}
 
-    /* Grid Layout for entire page */
+/* Using CSS Grid for overall layout */
+body {
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-areas:
         "header"
         "nav"
@@ -27,21 +28,20 @@ body {
 /* Assign grid areas */
 header {
     grid-area: header;
-    background-color: #222;
+    background: #222;
     color: white;
     padding: 1rem;
 }
 
 nav {
     grid-area: nav;
-    background-color: #444;
+    background: #444;
     padding: 1rem;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav li {
@@ -56,24 +56,21 @@ nav a {
 main {
     grid-area: main;
     padding: 1rem;
-
-    /* Grid inside main */
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-aside {
-    background-color: #f4f4f4;
-    padding: 1rem;
 }
 
 footer {
     grid-area: footer;
-    background-color: #222;
+    background: #222;
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+/* Stack content vertically on mobile */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 /* =========================
@@ -82,16 +79,22 @@ footer {
 
 @media screen and (min-width: 1024px) {
 
+    /* Grid layout changes for desktop */
     body {
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: 200px 1fr;
         grid-template-areas:
             "header header"
             "nav main"
             "footer footer";
     }
 
+    /* Two-column layout inside main */
     main {
         grid-template-columns: 2fr 1fr;
+    }
+
+    nav li {
+        margin-bottom: 20px;
     }
 }
 
@@ -102,9 +105,13 @@ footer {
 @media screen and (min-width: 1920px) {
 
     body {
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 300px 1fr 300px;
+        grid-template-areas:
+            "header header header"
+            "nav main main"
+            "footer footer footer";
         max-width: 1600px;
-        margin: 0 auto;
+        margin: auto;
     }
 
     main {
