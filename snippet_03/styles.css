@@ -1,0 +1,172 @@
+/*
+   Snippet 03 - Media Queries with CSS Grid
+
+   Resources Used:
+   - MDN Web Docs (CSS Grid & Media Queries)
+   - W3Schools CSS Grid Tutorial
+   - Course lecture materials
+   - Class examples
+
+   Demonstrates responsive layouts at:
+   320px (mobile)
+   1024px (desktop)
+   1920px (large screens)
+*/
+
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Mobile First (320px)
+========================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1a1a1a;
+    line-height: 1.6;
+
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.site-header { grid-area: header; }
+.layout { grid-area: main; }
+.site-footer { grid-area: footer; }
+
+/* Header */
+.site-header {
+    background-color: #0f172a;
+    color: white;
+    padding: 1.5rem;
+}
+
+.navigation ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.navigation li {
+    margin-bottom: 0.5rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Layout */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+/* Image */
+img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Typography */
+h1 { font-size: 2rem; }
+h2 { margin-bottom: 1rem; }
+p { margin-top: 1rem; }
+
+/* Buttons */
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 300px;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+.site-footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* =========================
+   Desktop (1024px)
+========================= */
+
+@media (min-width: 1024px) {
+
+    .layout {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .navigation ul {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1.5rem;
+    }
+
+}
+
+/* =========================
+   Large Screens (1920px)
+========================= */
+
+@media (min-width: 1920px) {
+
+    body {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .layout {
+        grid-template-columns: 3fr 1fr;
+        gap: 3rem;
+    }
+
+}

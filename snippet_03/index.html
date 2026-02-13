@@ -2,41 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Snippet 03 - Media Queries with Grid</title>
+    <title>Lumina – Product Style Guide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>My Product Website</h1>
-    </header>
-
-    <nav>
+<header class="site-header">
+    <h1>Lumina Style Guide</h1>
+    <nav class="navigation">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
+</header>
 
-    <main>
-        <section class="content">
-            <h2>Welcome</h2>
-            <p>This is my responsive layout using CSS Grid.</p>
-        </section>
+<main class="layout">
 
-        <aside>
-            <h3>Sidebar</h3>
-            <p>Additional information here.</p>
-        </aside>
-    </main>
+    <section>
+        <h2>Typography</h2>
+        <h3>Heading Level Three</h3>
+        <h4>Heading Level Four</h4>
+        <p>
+            Lumina is a modern lighting product designed for creative spaces.
+            Learn more about our inspiration by visiting our 
+            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
+                design philosophy page
+            </a>.
+        </p>
+    </section>
 
-    <footer>
-        <p>© 2026 My Website</p>
-    </footer>
+    <section>
+        <h2>Product Preview</h2>
+        <img src="product.jpg" alt="Lumina smart lamp product preview">
+    </section>
+
+    <section>
+        <h2>Buttons</h2>
+        <button class="btn-primary">Primary Button</button>
+        <button class="btn-secondary">Secondary Button</button>
+    </section>
+
+    <section>
+        <h2>Form Elements</h2>
+        <form>
+            <label for="email">Email Address</label>
+            <input type="text" id="email" placeholder="Enter your email">
+
+            <label class="checkbox-label">
+                <input type="checkbox">
+                Subscribe to newsletter
+            </label>
+        </form>
+    </section>
+
+    <section>
+        <h2>Product Card</h2>
+        <div class="card">
+            <h3>Smart Lumina Lamp</h3>
+            <p>A compact smart lamp designed for modern interiors.</p>
+            <button class="btn-primary">Buy Now</button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 Lumina Lighting Co.</p>
+</footer>
 
 </body>
 </html>
