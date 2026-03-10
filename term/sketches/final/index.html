@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Three Visualization Proposals</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Three Visualization Proposals</h1>
+
+<p>
+For this project, I collected personal daily productivity data including:
+scheduled commitments, total time spent on planned activities, unexpected engagements,
+and perceived time management effectiveness (rated 1–5).
+</p>
+
+<p>
+This dataset ranges approximately as follows:
+</p>
+
+<ul>
+    <li>Scheduled Commitments: 1 – 4</li>
+    <li>Planned Activity Time: 2.5 – 9 Hours</li>
+    <li>Unexpected Engagements: 0 – 6</li>
+    <li>Effectiveness: 1 – 5</li>
+</ul>
+
+<hr>
+
+<section>
+
+<h2>Sketch 1 – Bubble Plot</h2>
+
+<p><strong>Hypothesis:</strong><br>
+Higher commitments improve effectiveness, but more unexpected engagements reduce it.
+
+</p>
+
+<p><strong>Data Used:</strong></p>
+<ul>
+    <li>Scheduled Commitments (1–4)</li>
+    <li>Effectiveness Rating (1–5)</li>
+    <li>Unexpected Engagements (0–6)</li>
+    <li>Total Planned Time (2.5–9 hours)</li>
+</ul>
+
+<p><strong>Representation:</strong></p>
+<ul>
+    <li>X-axis → Scheduled Commitments</li>
+    <li>Y-axis → Effectiveness</li>
+    <li>Bubble Size → Unexpected Engagements</li>
+    <li>Bubble Color → Planned Activity Time</li>
+</ul>
+
+<p><a href="sketch1.pdf">View Sketch 1</a></p>
+
+</section>
+
+<hr>
+
+<section>
+
+<h2>Sketch 2 – Heatmap</h2>
+
+<p><strong>Hypothesis:</strong><br>
+As time on planned activities increases, effectiveness improves
+higher unexpected engagements reduce effectiveness regardless of time spent.
+</p>
+
+<p><strong>Data Used:</strong></p>
+<ul>
+    <li>Planned Activity Time (2.5–9 hours)</li>
+    <li>Unexpected Engagements (0–6)</li>
+    <li>Effectiveness Rating (1–5)</li>
+</ul>
+
+<p><strong>Representation:</strong></p>
+<ul>
+    <li>X-axis → Planned Time</li>
+    <li>Y-axis → Unexpected Engagements</li>
+    <li>Color Intensity → Effectiveness</li>
+</ul>
+
+<p><a href="sketch2.pdf">View Sketch 2</a></p>
+
+</section>
+
+<hr>
+
+<section>
+
+<h2>Sketch 3 – Timeline Flow Visualization</h2>
+
+<p><strong>Hypothesis:</strong><br>
+Daily productivity patterns: Balance of planned activities vs. unexpected engagements (Jan 27-Feb 7)
+</p>
+
+<p><strong>Data Used:</strong></p>
+<ul>
+    <li>Date (Jan 27 – Feb 7)</li>
+    <li>Effectiveness Rating (1–5)</li>
+    <li>Total Planned Time (2.5–9 hours)</li>
+    <li>Unexpected Engagements (0–6)</li>
+</ul>
+
+<p><strong>Representation:</strong></p>
+<ul>
+    <li>X-axis → Date</li>
+    <li>Y-axis → Effectiveness</li>
+    <li>Circle Size → Planned Time</li>
+    <li>Markers → Unexpected Engagements</li>
+</ul>
+
+<p><a href="sketch3.pdf">View Sketch 3</a></p>
+
+
+</body>
+</html>
