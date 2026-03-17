@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            
+            <div class="brand" onclick="switchPage('home')" style="cursor: pointer;">
+                <img src="images/logo.png" alt="Student Hub Logo" class="sidebar-logo">
+            </div>
+            
+            
+            <nav class="nav-menu">
+                <a href="#" data-target="home" class="nav-link active">
+                    <span class="icon">🏠</span> Home
+                </a>
+                <a href="#" data-target="listings" class="nav-link">
+                    <span class="icon">🏢</span> House Listings
+                </a>
+                <a href="#" data-target="roommates" class="nav-link">
+                    <span class="icon">👥</span> Roommate Finder
+                </a>
+                <a href="#" data-target="housing_guide" class="nav-link">
+                    <span class="icon">📖</span> Housing Guide 
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <section id="home" class="page active">
+                <div class="hero-banner">
+                    <h2>Find Your Perfect Student Home</h2>
+                    <p>Search affordable housing and find roommates - all in one place</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-light" onclick="switchPage('listings')">Find Listing</button>
+                    </div>
+                </div>
+
+                <div class="grid-2x2">
+                    <div class="feature-card clickable-card" onclick="switchPage('listings')">
+                        <div class="feature-icon bg-blue">🔍</div>
+                        <div>
+                            <h3>House Listings</h3>
+                            <p>Browse available listings in BC</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card clickable-card" onclick="switchPage('housing_guide')">
+                        <div class="feature-icon bg-orange">📖</div>
+                        <div>
+                            <h3>Housing Guide</h3>
+                            <p>Tenant rights, tips & more</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card clickable-card" onclick="switchPage('roommates')">                    
+                        <div class="feature-icon bg-purple">👥</div>
+                        <div>
+                            <h3>Roommate Finder</h3>
+                            <p>Connect with other students</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="locations-row">
+                    <div class="location-item">
+                        <span class="pin">📍</span>
+                        <h4>Vancouver</h4>
+                        <p>150+ listings</p>
+                        <p class="avg-price">Avg. $850/month</p>
+                    </div>
+                    <div class="location-item">
+                        <span class="pin">📍</span>
+                        <h4>Victoria</h4>
+                        <p>10+ listings</p>
+                        <p class="avg-price">Avg. $700/month</p>
+                    </div>
+                    <div class="location-item">
+                        <span class="pin">📍</span>
+                        <h4>Surrey</h4>
+                        <p>75+ listings</p>
+                        <p class="avg-price">Avg. $850/month</p>
+                    </div>
+                    <div class="location-item">
+                        <span class="pin">📍</span>
+                        <h4>Burnaby</h4>
+                        <p>150+ listings</p>
+                        <p class="avg-price">Avg. $650/month</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="listings" class="page">
+                <div class="split-layout">
+                    <div class="filters-panel">
+                        <h2>Filters</h2>
+                        <p class="subtitle">Refine your search</p>
+
+                        <div class="filter-group">
+                            <label>Budget Range</label>
+                            <div class="input-row">
+                                <input type="number" id="filter-min-price" placeholder="Min $">
+                                <input type="number" id="filter-max-price" placeholder="Max $">
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Location</label>
+                            <select id="filter-location">
+                                <option value="all">All Locations</option>
+                                <option value="Vancouver">Vancouver</option>
+                                <option value="Burnaby">Burnaby</option>
+                                <option value="Surrey">Surrey</option>
+                                <option value="Victoria">Victoria</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Room Type</label>
+                            <select id="filter-type">
+                                <option value="all">All Room Types</option>
+                                <option value="Private">Private</option>
+                                <option value="Shared">Shared</option>
+                            </select>
+                        </div>
+
+                        <button class="clear-btn">Clear Filters</button>
+                    </div>
+
+                    <div class="results-panel" id="listings-container">
+                        <div class="listing-item" data-price="650" data-location="Burnaby" data-type="Private">
+                            <img src="images/Burnaby Room Image.jpg" alt="Burnaby Room" class="listing-img">
+                            <div class="listing-info">
+                                <span class="pin">📍</span>
+                                <h3>Burnaby</h3>
+                                <p>Private Room</p>
+                                <p class="price">$650/month</p>
+                            </div>
+                        </div>
+                        <div class="listing-item" data-price="850" data-location="Vancouver" data-type="Private">
+                            <img src="images/Vancouver Room Image.jpg" alt="Vancouver Room" class="listing-img">
+                            <div class="listing-info">
+                                <span class="pin">📍</span>
+                                <h3>Vancouver</h3>
+                                <p>Private Room</p>
+                                <p class="price">$850/month</p>
+                            </div>
+                        </div>
+                        <div class="listing-item" data-price="450" data-location="Surrey" data-type="Shared">
+                            <img src="images/Surrey Room Image.jpg" alt="Surrey Room" class="listing-img">
+                            <div class="listing-info">
+                                <span class="pin">📍</span>
+                                <h3>Surrey</h3>
+                                <p>Shared Room</p>
+                                <p class="price">$750/month</p>
+                            </div>
+                        </div>
+                        <div id="listings-no-results" class="no-results hidden">
+                            <span class="no-results-icon">🔍</span>
+                            <h3>No listings found</h3>
+                            <p>Try broadening your budget or location filters.</p>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="roommates" class="page">
+                <div class="split-layout">
+                    <div class="filters-panel">
+                        <h2>Filters</h2>
+                        <p class="subtitle">Find Your Match</p>
+
+                        <div class="filter-group">
+                            <label>Max Budget</label>
+                            <select id="filter-rm-budget">
+                                <option value="all">All Budgets</option>
+                                <option value="600">Under $600</option>
+                                <option value="800">Under $800</option>
+                                <option value="1000">Under $1000</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>School</label>
+                            <select id="filter-rm-school">
+                                <option value="all">All Schools</option>
+                                <option value="UBC">Univ. of British Columbia (UBC)</option>
+                                <option value="SFU">Simon Fraser Univ. (SFU)</option>
+                                <option value="UVic">Univ. of Victoria (UVic)</option>
+                                <option value="BCIT">BCIT</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Gender</label>
+                            <select id="filter-rm-gender">
+                                <option value="all">Any</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Non-binary">Non-binary</option>
+                            </select>
+                        </div>
+
+                        <button class="clear-btn">Clear Filters</button>
+                    </div>
+
+                    <div class="results-panel list-view" id="roommates-container">
+                        <div class="profile-card" data-budget="750" data-school="UBC" data-gender="Male">
+                            <div class="profile-icon">👤</div>
+                            <div class="profile-details">
+                                <h3>Alex John</h3>
+                                <p>UBC • Male • Move-in: April 2026</p>
+                                <p>Budget: $750/month</p>
+                            </div>
+                            <button class="btn btn-primary">Send Message</button>
+                        </div>
+                        <div class="profile-card" data-budget="800" data-school="SFU" data-gender="Male">
+                            <div class="profile-icon">👤</div>
+                            <div class="profile-details">
+                                <h3>David Cho</h3>
+                                <p>SFU • Male • Move-in: March 2026</p>
+                                <p>Budget: $800/month</p>
+                            </div>
+                            <button class="btn btn-primary">Send Message</button>
+                        </div>
+                        <div class="profile-card" data-budget="700" data-school="UBC" data-gender="Female">
+                            <div class="profile-icon">👤</div>
+                            <div class="profile-details">
+                                <h3>Maya Thorn</h3>
+                                <p>UBC • Female • Move-in: March 2026</p>
+                                <p>Budget: $700/month</p>
+                            </div>
+                            <button class="btn btn-primary">Send Message</button>
+                        </div>
+                        <div id="roommates-no-results" class="no-results hidden">
+                            <span class="no-results-icon">👥</span>
+                            <h3>No roommates found</h3>
+                            <p>Try adjusting your filters to find a match.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="housing_guide" class="page">
+                <h2>Student Housing Guide</h2>
+                <p class="subtitle mb-large">Essential information for student renters in BC</p>
+
+                <div class="resource-list">
+                    <div class="feature-card clickable-card" onclick="switchPage('article-lease')">
+                        <div class="feature-icon bg-green">💲</div>
+                        <div>
+                            <h3>How to Sign a Lease</h3>
+                            <p>Everything you need to know before signing</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card clickable-card" onclick="switchPage('article-scams')">
+                        <div class="feature-icon bg-orange">📖</div>
+                        <div>
+                            <h3>How to Avoid Rental Scams</h3>
+                            <p>Protect yourself from fraudulent listings and scammers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>Scam Warning</h4>
+                    <ul>
+                        <li>Never send money before viewing the property in person</li>
+                        <li>Always meet the landlord face-to-face</li>
+                        <li>Verify property ownership with official records</li>
+                        <li>Trust your instincts - if it feels wrong, walk away</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="article-lease" class="page">
+                <button class="back-btn" onclick="switchPage('housing_guide')">
+                    <span style="font-size: 1.2rem;">←</span> Back to Guide
+                </button>
+                
+                <div class="article-header">
+                    <h2>How to Sign a Lease</h2>
+                    <p class="subtitle mb-large">A step-by-step guide to protect yourself when signing a rental agreement.</p>
+                </div>
+
+                <div class="article-content">
+                    <div class="article-block">
+                        <h3>1. Read Before You Sign</h3>
+                        <p>Make sure you understand all clauses. Don't feel rushed to sign on the spot. Take a copy home to review if needed.</p>
+                    </div>
+
+                    <div class="article-block">
+                        <h3>2. Check for Included Utilities</h3>
+                        <p>Confirm exactly what is included in your rent (water, internet, hydro) and what you will need to pay extra for.</p>
+                    </div>
+
+                    <div class="article-block">
+                        <h3>3. Document Existing Damage</h3>
+                        <p>Before moving your belongings in, take photos and videos of any existing damage to avoid being charged for it later.</p>
+                    </div>
+
+                    <div class="article-block">
+                        <h3>4. Know Your Rights</h3>
+                        <p>Familiarize yourself with the rules of the Residential Tenancy Branch (RTB) so you understand your rights as a tenant.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="article-scams" class="page">
+                <button class="back-btn" onclick="switchPage('housing_guide')">
+                    <span style="font-size: 1.2rem;">←</span> Back to Guide
+                </button>
+                
+                <div class="article-header">
+                    <h2>How to Avoid Rental Scams</h2>
+                    <p class="subtitle mb-large">Key red flags to watch out for to protect yourself and your money.</p>
+                </div>
+
+                <div class="article-content">
+                    <div class="article-block">
+                        <h3>1. Never send money before viewing</h3>
+                        <p>Scammers often ask for a deposit or first month's rent before you've even seen the property. Always view the apartment in person or have a trusted friend view it for you.</p>
+                    </div>
+
+                    <div class="article-block">
+                        <h3>2. Meet the landlord face-to-face</h3>
+                        <p>Be wary of landlords who claim they are out of the country or unable to meet you. Legitimate landlords or their licensed property managers will meet you in person to show the unit.</p>
+                    </div>
+
+                    <div class="article-block">
+                        <h3>3. Verify property ownership</h3>
+                        <p>Ask for ID and ensure the person showing the unit actually has the authority to rent it out. Be highly suspicious if they cannot provide proper documentation or keys to the main entrances.</p>
+                    </div>
+
+                    <div class="article-block">
+                        <h3>4. Trust your instincts</h3>
+                        <p>If a deal seems too good to be true (like a luxury apartment for half the average market price), it probably is. Don't let high-pressure tactics or a false sense of urgency force you into a quick decision.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+
+        // This function handles the page switching logic
+        function switchPage(targetPageId) {
+            // 1. Hide all sections by removing the 'active' class
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // 2. Show the target section by adding the 'active' class
+            const targetPage = document.getElementById(targetPageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // 3. Update the sidebar menu to highlight the active link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                // If this link's data-target matches the page we just opened, make it active
+                if (link.getAttribute('data-target') === targetPageId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Add event listeners to the sidebar links when the file loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent the browser from refreshing the page
+                    
+                    // Get the target page name from the data-target attribute (e.g., 'home', 'listings')
+                    const target = link.getAttribute('data-target');
+                    
+                    // Execute the switch
+                    switchPage(target);
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
