@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.axis path,
+.axis line {
+    stroke: black;
+}
+
+.axisLabel {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.legend {
+    font-size: 12px;
+}
