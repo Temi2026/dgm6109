@@ -1,0 +1,155 @@
+[
+  {
+    "date": "27/1/26",
+    "time": "9pm",
+    "commitments": 4,
+    "hours": 7,
+    "unexpected": 1,
+    "effectiveness": 4,
+    "note": "Busy but Productive"
+  },
+  {
+    "date": "28/1/26",
+    "time": "8:30pm",
+    "commitments": 3,
+    "hours": 5,
+    "unexpected": 0,
+    "effectiveness": 5,
+    "note": "Very Productive"
+  },
+  {
+    "date": "29/1/26",
+    "time": "10pm",
+    "commitments": 2,
+    "hours": 6.5,
+    "unexpected": 0,
+    "effectiveness": 5,
+    "note": "Very Productive"
+  },
+  {
+    "date": "30/1/26",
+    "time": "9pm",
+    "commitments": 1,
+    "hours": 3,
+    "unexpected": 4,
+    "effectiveness": 3,
+    "note": "Not so productive"
+  },
+  {
+    "date": "31/1/26",
+    "time": "9:40pm",
+    "commitments": 2,
+    "hours": 2.5,
+    "unexpected": 6,
+    "effectiveness": 1,
+    "note": "Busy but not productive"
+  },
+  {
+    "date": "1/2/26",
+    "time": "10pm",
+    "commitments": 1,
+    "hours": 3,
+    "unexpected": 0,
+    "effectiveness": 5,
+    "note": "Very productive"
+  },
+  {
+    "date": "2/2/26",
+    "time": "9:20pm",
+    "commitments": 3,
+    "hours": 6,
+    "unexpected": 5,
+    "effectiveness": 1,
+    "note": "Busy but not productive"
+  },
+  {
+    "date": "3/2/26",
+    "time": "8:10pm",
+    "commitments": 2,
+    "hours": 4.5,
+    "unexpected": 0,
+    "effectiveness": 4,
+    "note": "Productive"
+  },
+  {
+    "date": "4/2/26",
+    "time": "9pm",
+    "commitments": 4,
+    "hours": 8,
+    "unexpected": 3,
+    "effectiveness": 2,
+    "note": "Not productive"
+  },
+  {
+    "date": "5/2/26",
+    "time": "9:15pm",
+    "commitments": 2,
+    "hours": 6,
+    "unexpected": 0,
+    "effectiveness": 4,
+    "note": "Productive"
+  },
+  {
+    "date": "6/2/26",
+    "time": "8pm",
+    "commitments": 3,
+    "hours": 8.5,
+    "unexpected": 1,
+    "effectiveness": 3,
+    "note": "Not so productive"
+  },
+  {
+    "date": "7/2/26",
+    "time": "9:20pm",
+    "commitments": 4,
+    "hours": 5,
+    "unexpected": 3,
+    "effectiveness": 2,
+    "note": "Not productive"
+  },
+  {
+    "date": "8/2/26",
+    "time": "10pm",
+    "commitments": 2,
+    "hours": 4,
+    "unexpected": 5,
+    "effectiveness": 3,
+    "note": "Busy but not productive"
+  },
+  {
+    "date": "9/2/26",
+    "time": "8:50pm",
+    "commitments": 3,
+    "hours": 9,
+    "unexpected": 5,
+    "effectiveness": 1,
+    "note": "Busy but not productive"
+  },
+  {
+    "date": "10/2/26",
+    "time": "9pm",
+    "commitments": 2,
+    "hours": 5,
+    "unexpected": 0,
+    "effectiveness": 5,
+    "note": "Busy but effective"
+  },
+  {
+    "date": "11/2/26",
+    "time": "8:40pm",
+    "commitments": 4,
+    "hours": 8,
+    "unexpected": 5,
+    "effectiveness": 1,
+    "note": "Very busy but not productive"
+  },
+  {
+    "date": "12/2/26",
+    "time": "8pm",
+    "commitments": 4,
+    "hours": 7,
+    "unexpected": 0,
+    "effectiveness": 5,
+    "note": "Busy and productive"
+  }
+]
