@@ -66,7 +66,7 @@ let yScale = d3.scaleLinear()
 // sqrt makes sizes look bigger
 let radiusScale = d3.scaleLinear()
     .domain([0, 6])
-    .range([5, 50]);
+    .range([5, 50]); // Reduced max size from 80 to 50.
 
 // Color scale (hours → color)
 // Low hours = blue, high hours = red
