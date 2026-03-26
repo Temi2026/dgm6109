@@ -12,7 +12,7 @@ let margin = {
     left: 80    // 80 pixels of empty space on the left
 };
 
-// calculate the actual space we have left after removing the margins.
+// Calculate the actual space we have left after removing the margins.
 let width = svgWidth - margin.left - margin.right;
 let height = svgHeight - margin.top - margin.bottom;
 
@@ -66,7 +66,7 @@ let yScale = d3.scaleLinear()
 // sqrt makes sizes look bigger
 let radiusScale = d3.scaleLinear()
     .domain([0, 6])
-    .range([5, 80]);
+    .range([5, 50]);
 
 // Color scale (hours → color)
 // Low hours = blue, high hours = red
