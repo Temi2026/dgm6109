@@ -1,0 +1,331 @@
+/* =========================================
+   1. BASE STYLES & RESETS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Color Variables (Design Tokens) */
+:root {
+    --primary-purple: #A855F7;
+    --dark-purple: #8B5CF6;
+    --light-purple: #E9D5FF;
+    --text-dark: #1F2937;
+    --text-gray: #4B5563;
+    --bg-light: #FFFFFF;
+    --border-color: #E5E7EB;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Main Layout Wrapper */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================
+   2. SIDEBAR NAVIGATION
+   ========================================= */
+.sidebar {
+    width: 260px;
+    border-right: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    background: white;
+}
+
+/* Logo Image Styling */
+.sidebar-logo {
+    width: 100%;         
+    max-width: 200px;    
+    height: auto;        
+    object-fit: contain; 
+    display: block;
+}
+
+.brand {
+    margin-bottom: 3rem;
+    transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+    opacity: 0.8;
+}
+
+/* Navigation Menu Links */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-purple);
+}
+
+/* =========================================
+   3. MAIN CONTENT AREA & PAGES
+   ========================================= */
+.main-content {
+    margin-left: 260px; /* Offset for fixed sidebar */
+    padding: 3rem;
+    flex-grow: 1;
+    max-width: 1000px;
+}
+
+/* Page Switching Logic (Hidden by default, shown when active) */
+.page {
+    display: none; 
+    animation: fadeIn 0.3s ease;
+}
+
+.page.active {
+    display: block; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography Utilities */
+.subtitle { color: var(--text-gray); margin-bottom: 2rem; }
+.mb-large { margin-bottom: 3rem; }
+
+/* Global Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-primary { background: var(--primary-purple); color: white; }
+.btn-light { background: rgba(255,255,255,0.8); color: var(--primary-purple); }
+.btn-dark { background: rgba(0,0,0,0.2); color: white; }
+
+/* =========================================
+   4. HOME PAGE COMPONENTS
+   ========================================= */
+.hero-banner {
+    background: linear-gradient(135deg, #B366FF, #8B5CF6);
+    color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+}
+.hero-banner h2 { font-size: 2rem; margin-bottom: 1rem; }
+.hero-banner p { margin-bottom: 2rem; font-size: 1.1rem; }
+.hero-buttons { display: flex; gap: 1rem; }
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Standard Feature Card */
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Card Icon Colors */
+.bg-blue { background: #E0F2FE; }
+.bg-green { background: #DCFCE7; }
+.bg-purple { background: #F3E8FF; }
+.bg-orange { background: #FFEDD5; }
+
+.locations-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+.pin { color: var(--primary-purple); font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+.pin.large { font-size: 2rem; }
+.avg-price { color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem; }
+
+/* =========================================
+   5. FILTER PANEL & SPLIT LAYOUT
+   ========================================= */
+.split-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 4rem;
+}
+
+/* Sticky Sidebar Filter Panel */
+.filters-panel {
+    position: sticky;
+    top: 2rem; 
+    align-self: start; 
+    height: max-content; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+
+.filter-group { margin-bottom: 1.5rem; }
+.filter-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+.input-row { display: flex; gap: 0.5rem; }
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: white;
+}
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--primary-purple);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* =========================================
+   6. CARDS & LISTINGS
+   ========================================= */
+.results-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.list-view { align-items: flex-start; gap: 2rem; }
+
+/* Image House Listing Cards */
+.listing-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+    cursor: default;
+}
+.listing-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+.listing-info { padding: 1.5rem; }
+.listing-info .price { font-weight: bold; color: var(--primary-purple); font-size: 1.1rem; margin-top: 0.5rem; }
+
+/* Roommate Profile Cards */
+.profile-card { display: flex; align-items: center; gap: 2rem; width: 100%; }
+.profile-icon { color: var(--primary-purple); font-size: 2.5rem; }
+.profile-details { flex-grow: 1; }
+.profile-details p { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.25rem; }
+
+/* Interactive Clickable Cards */
+.clickable-card { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.clickable-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+
+/* Hidden Helper Class for JS Filtering */
+.hidden { display: none !important; }
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    width: 100%;
+    color: var(--text-gray);
+}
+.no-results-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; display: block; }
+
+/* =========================================
+   7. ARTICLES & GUIDES
+   ========================================= */
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--primary-purple);
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+.back-btn:hover { text-decoration: underline; }
+.article-content { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; }
+.article-block h3 { color: var(--text-dark); margin-bottom: 0.5rem; font-size: 1.2rem; }
+.article-block p { color: var(--text-gray); line-height: 1.6; font-size: 1rem; }
+.warning-box { background-color: #F4F1E1; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+
+/* =========================================
+   8. MOBILE RESPONSIVENESS (< 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .app-container { flex-direction: column; }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-menu { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+    .main-content { margin-left: 0; padding: 1.5rem; }
+    .grid-2x2 { grid-template-columns: 1fr; gap: 1rem; }
+    .locations-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .split-layout { grid-template-columns: 1fr; gap: 2rem; }
+    
+    .filters-panel {
+        position: relative;
+        top: 0;
+        height: auto;
+        max-height: none;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .listing-item { max-width: 100%; }
+    .profile-card { flex-direction: column; text-align: center; }
+}
